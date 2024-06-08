@@ -129,3 +129,6 @@ dmypy.json
 .pyre/
 venv/
 data/
+vncorenlp/
+my_fine_tuned_t5_small_model/
+models/
