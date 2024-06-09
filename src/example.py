@@ -6,8 +6,8 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 
-tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")  
-model = AutoModelForSeq2SeqLM.from_pretrained("google/mt5-small")
+tokenizer = AutoTokenizer.from_pretrained("VietAI/vit5-large-vietnews-summarization")  
+model = AutoModelForSeq2SeqLM.from_pretrained("VietAI/vit5-large-vietnews-summarization")
 model.to(device)
 
 sentence = "VietAI là tổ chức phi lợi nhuận với sứ mệnh ươm mầm tài năng về trí tuệ nhân tạo và xây dựng một cộng đồng các chuyên gia trong lĩnh vực trí tuệ nhân tạo đẳng cấp quốc tế tại Việt Nam."
