@@ -20,8 +20,13 @@ input_ids, attention_masks = encoding["input_ids"].to(device), encoding["attenti
 outputs = model.generate(
     input_ids=input_ids, attention_mask=attention_masks,
     max_length=256,
-    # num_beams =1, 
-    # early_stopping=True,
+    num_beams=5,
+    no_repeat_ngram_size=2,
+    early_stopping=True,
+    # do_sample=True,
+    # top_p=0.8,
+    # top_k=0,
+    # temperature=0.5,
 )
 for output in outputs:
     line = tokenizer.decode(output, skip_special_tokens=True, clean_up_tokenization_spaces=True)
