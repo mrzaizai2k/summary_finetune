@@ -132,5 +132,6 @@ data/
 vncorenlp/
 my_fine_tuned_t5_small_model/
 vietnamese_mt5_summary_model/
+vietnamese_mt5_summary_model_2/
 models/
 docs/
