@@ -8,7 +8,7 @@ from src.Utils.utils import read_text_from_file
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 
-model_dir="vietnamese_mt5_summary_model"
+model_dir="VietAI/vit5-base-vietnews-summarization"
 tokenizer = AutoTokenizer.from_pretrained(model_dir)  
 model = AutoModelForSeq2SeqLM.from_pretrained(model_dir, 
                                               torch_dtype=torch.bfloat16,).to(device)
@@ -32,7 +32,7 @@ outputs = model.generate(
     # no_repeat_ngram_size=3,
     # early_stopping=True,
     # length_penalty= 2.0,
-    do_sample=True,
+    # do_sample=True,
     # top_p=0.8,
     penalty_alpha = 0.6,
     top_k=4,

@@ -133,5 +133,9 @@ vncorenlp/
 my_fine_tuned_t5_small_model/
 vietnamese_mt5_summary_model/
 vietnamese_mt5_summary_model_2/
+vietnamese_t5_summary_model_falcon/
+Vietnam_T5_small_200/
+*.json
+*.pt
 models/
 docs/
